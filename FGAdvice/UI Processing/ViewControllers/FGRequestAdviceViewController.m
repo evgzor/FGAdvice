@@ -43,14 +43,15 @@
     [self.httpClient cancel];
 }
 
+-(void)dealloc {
+  [_scheduler stop];
+  [self.httpClient cancel];
+}
+
 - (void)setAdvice:(FGAModel *)advice {
     _advice = advice;
     self.adviceLabel.text = advice.text;
 }
-
-/*- (void)timerFireMethod:(NSTimer *)timer {
-    [self reload:self.reloadButton];
-}*/
 
 - (IBAction)reload:(id)sender {
     self.reloadButton.enabled = NO;

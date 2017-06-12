@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		F014E82C1EEE64FB008328E0 /* ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F014E82B1EEE64FB008328E0 /* ActivityIndicator.m */; };
+		F015793A1EEEFC610022566C /* NetworkClient+LoadAdvice.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A93AF1EEC166100C9D371 /* NetworkClient+LoadAdvice.m */; };
+		F015793F1EEEFC6B0022566C /* NSString+DecodeHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F047AC991EEA8D6F009951D1 /* NSString+DecodeHTML.m */; };
+		F01579401EEEFC6C0022566C /* NSString+DecodeHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F047AC991EEA8D6F009951D1 /* NSString+DecodeHTML.m */; };
+		F01579471EEEFE910022566C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F01E87691EE8123900ED0793 /* AppDelegate.m */; };
+		F015794B1EEEFEAD0022566C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01E876E1EE8123900ED0793 /* Main.storyboard */; };
+		F015794C1EEEFEAE0022566C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01E876E1EE8123900ED0793 /* Main.storyboard */; };
+		F015794D1EEEFEB20022566C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01E87761EE8123900ED0793 /* LaunchScreen.storyboard */; };
+		F015794E1EEEFEB20022566C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01E87761EE8123900ED0793 /* LaunchScreen.storyboard */; };
+		F01579501EEEFEBE0022566C /* FGAFavouritesDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F08A93A91EEC166100C9D371 /* FGAFavouritesDatabase.xcdatamodeld */; };
+		F01579511EEEFEC90022566C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F01E87661EE8123900ED0793 /* main.m */; };
+		F01579521EEEFEC90022566C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F01E87661EE8123900ED0793 /* main.m */; };
 		F01E87671EE8123900ED0793 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F01E87661EE8123900ED0793 /* main.m */; };
 		F01E876A1EE8123900ED0793 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F01E87691EE8123900ED0793 /* AppDelegate.m */; };
 		F01E87701EE8123900ED0793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01E876E1EE8123900ED0793 /* Main.storyboard */; };
@@ -16,9 +27,11 @@
 		F01E87831EE8123A00ED0793 /* FGAdviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F01E87821EE8123A00ED0793 /* FGAdviceTests.m */; };
 		F01E878E1EE8123A00ED0793 /* FGAdviceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F01E878D1EE8123A00ED0793 /* FGAdviceUITests.m */; };
 		F047AC791EEA888C009951D1 /* FGRequestAdviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F047AC741EEA888C009951D1 /* FGRequestAdviceViewController.m */; };
-		F047AC7A1EEA888C009951D1 /* FGAFavouritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F047AC761EEA888C009951D1 /* FGAFavouritesTableViewController.m */; };
 		F047AC7B1EEA888C009951D1 /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F047AC781EEA888C009951D1 /* GeneralViewController.m */; };
 		F047AC9C1EEA8D6F009951D1 /* NSString+DecodeHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F047AC991EEA8D6F009951D1 /* NSString+DecodeHTML.m */; };
+		F073EE2C1EEF10C400E9E9C3 /* FGAFavouritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F047AC761EEA888C009951D1 /* FGAFavouritesTableViewController.m */; };
+		F073EE2E1EEF11D900E9E9C3 /* NetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A93B11EEC166100C9D371 /* NetworkClient.m */; };
+		F073EE2F1EEF11EF00E9E9C3 /* URLSessionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A93B31EEC166100C9D371 /* URLSessionTask.m */; };
 		F07BD30C1EED58D400FDDD2C /* TimerServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BD30B1EED58D400FDDD2C /* TimerServiceFactory.m */; };
 		F07BD30F1EED5A2A00FDDD2C /* SchedulerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BD30E1EED5A2A00FDDD2C /* SchedulerFactory.m */; };
 		F08A93B61EEC166100C9D371 /* CoreDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A93A81EEC166100C9D371 /* CoreDataClient.m */; };
@@ -32,7 +45,6 @@
 		F08A93C71EEC259100C9D371 /* ServiceScheduleProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A93C61EEC259100C9D371 /* ServiceScheduleProcessing.m */; };
 		F08A93C91EEC309000C9D371 /* XcodeWarnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F08A93C81EEC309000C9D371 /* XcodeWarnings.xcconfig */; };
 		F08A93CC1EEC330800C9D371 /* FGAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A93CB1EEC330800C9D371 /* FGAModel.m */; };
-		F08A93CD1EEC330800C9D371 /* FGAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A93CB1EEC330800C9D371 /* FGAModel.m */; };
 		F08A93CE1EEC330800C9D371 /* FGAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A93CB1EEC330800C9D371 /* FGAModel.m */; };
 /* End PBXBuildFile section */
 
@@ -247,7 +259,7 @@
 		F047AC961EEA8D6F009951D1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				F08A93A51EEC166100C9D371 /* Service Tool */,
+				F08A93A51EEC166100C9D371 /* Service Tools */,
 				F047AC971EEA8D6F009951D1 /* Categories */,
 			);
 			path = Tools;
@@ -262,13 +274,14 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		F08A93A51EEC166100C9D371 /* Service Tool */ = {
+		F08A93A51EEC166100C9D371 /* Service Tools */ = {
 			isa = PBXGroup;
 			children = (
 				F08A93A61EEC166100C9D371 /* CoreData */,
 				F08A93AD1EEC166100C9D371 /* HTTP */,
 				F08A93B41EEC166100C9D371 /* Timer Service */,
 			);
+			name = "Service Tools";
 			path = "Service Tool";
 			sourceTree = "<group>";
 		};
@@ -277,9 +290,9 @@
 			children = (
 				F08A93A71EEC166100C9D371 /* CoreDataClient.h */,
 				F08A93A81EEC166100C9D371 /* CoreDataClient.m */,
-				F08A93A91EEC166100C9D371 /* FGAFavouritesDatabase.xcdatamodeld */,
 				F08A93AB1EEC166100C9D371 /* FGAFavouritesService.h */,
 				F08A93AC1EEC166100C9D371 /* FGAFavouritesService.m */,
+				F08A93A91EEC166100C9D371 /* FGAFavouritesDatabase.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -432,6 +445,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F015794B1EEEFEAD0022566C /* Main.storyboard in Resources */,
+				F015794D1EEEFEB20022566C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +454,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F015794C1EEEFEAE0022566C /* Main.storyboard in Resources */,
+				F015794E1EEEFEB20022566C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,9 +475,9 @@
 				F047AC791EEA888C009951D1 /* FGRequestAdviceViewController.m in Sources */,
 				F08A93B61EEC166100C9D371 /* CoreDataClient.m in Sources */,
 				F07BD30F1EED5A2A00FDDD2C /* SchedulerFactory.m in Sources */,
+				F073EE2C1EEF10C400E9E9C3 /* FGAFavouritesTableViewController.m in Sources */,
 				F08A93BA1EEC166100C9D371 /* NetworkClient.m in Sources */,
 				F08A93C71EEC259100C9D371 /* ServiceScheduleProcessing.m in Sources */,
-				F047AC7A1EEA888C009951D1 /* FGAFavouritesTableViewController.m in Sources */,
 				F047AC9C1EEA8D6F009951D1 /* NSString+DecodeHTML.m in Sources */,
 				F08A93B71EEC166100C9D371 /* FGAFavouritesDatabase.xcdatamodeld in Sources */,
 				F014E82C1EEE64FB008328E0 /* ActivityIndicator.m in Sources */,
@@ -475,8 +492,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08A93CD1EEC330800C9D371 /* FGAModel.m in Sources */,
+				F015793F1EEEFC6B0022566C /* NSString+DecodeHTML.m in Sources */,
 				F01E87831EE8123A00ED0793 /* FGAdviceTests.m in Sources */,
+				F01579511EEEFEC90022566C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,8 +502,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F015793A1EEEFC610022566C /* NetworkClient+LoadAdvice.m in Sources */,
+				F01579401EEEFC6C0022566C /* NSString+DecodeHTML.m in Sources */,
 				F08A93CE1EEC330800C9D371 /* FGAModel.m in Sources */,
+				F073EE2E1EEF11D900E9E9C3 /* NetworkClient.m in Sources */,
+				F073EE2F1EEF11EF00E9E9C3 /* URLSessionTask.m in Sources */,
+				F01579471EEEFE910022566C /* AppDelegate.m in Sources */,
 				F01E878E1EE8123A00ED0793 /* FGAdviceUITests.m in Sources */,
+				F01579521EEEFEC90022566C /* main.m in Sources */,
+				F01579501EEEFEBE0022566C /* FGAFavouritesDatabase.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +596,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -613,6 +639,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

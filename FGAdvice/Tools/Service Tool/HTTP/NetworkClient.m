@@ -74,14 +74,15 @@ static NSString* const kErrorDomainString = @"Server Error";
     DataTaskCompletion block = task.completionBlock;
     NSData *data = task.data;
   
+  NSError* taskError;
     if (error.code  > 0 ) {
-      error =  [self errorFromHTTPURLResponse:(NSHTTPURLResponse*)response data:data];
+      taskError =  [self errorFromHTTPURLResponse:(NSHTTPURLResponse*)response data:data];
     }
   
     
     if (block)
     {
-        block((error==nil) ? data : nil, error);
+        block((taskError == nil) ? data : nil, taskError);
     }
     
     dispatch_sync(self.protectingQueue, ^{

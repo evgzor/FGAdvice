@@ -33,8 +33,17 @@
 }
 
 - (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+  
+  XCUIApplication *app = [[XCUIApplication alloc] init];
+  XCUIElement *addToFavouritesButton = app.buttons[@"Add to Favourites"];
+  [addToFavouritesButton tap];
+  [app.buttons[@"Reload"] tap];
+  [addToFavouritesButton tap];
+  [app.buttons[@"Favorites"] tap];
+  [app.navigationBars[@"Favourites"].buttons[@"Edit"] tap];
+  
+  
 }
+
 
 @end
