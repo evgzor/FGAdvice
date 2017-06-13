@@ -178,7 +178,7 @@
 				F01E87681EE8123900ED0793 /* AppDelegate.h */,
 				F01E87691EE8123900ED0793 /* AppDelegate.m */,
 				F047AC711EEA888C009951D1 /* UI Processing */,
-				F047AC921EEA8CFF009951D1 /* Model structures */,
+				F047AC921EEA8CFF009951D1 /* Model Structures */,
 				F047AC961EEA8D6F009951D1 /* Tools */,
 				F01E87741EE8123900ED0793 /* Assets.xcassets */,
 				F01E87791EE8123900ED0793 /* Info.plist */,
@@ -247,12 +247,13 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		F047AC921EEA8CFF009951D1 /* Model structures */ = {
+		F047AC921EEA8CFF009951D1 /* Model Structures */ = {
 			isa = PBXGroup;
 			children = (
 				F08A93CA1EEC330800C9D371 /* FGAModel.h */,
 				F08A93CB1EEC330800C9D371 /* FGAModel.m */,
 			);
+			name = "Model Structures";
 			path = "Model structures";
 			sourceTree = "<group>";
 		};
