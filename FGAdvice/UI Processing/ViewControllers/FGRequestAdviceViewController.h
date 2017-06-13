@@ -12,7 +12,4 @@
 
 @interface FGRequestAdviceViewController : UIViewController
 
-@property (nonatomic, strong) NetworkClient *httpClient;
-@property (nonatomic, strong) FGAFavouritesService *favouritesService;
-
 @end

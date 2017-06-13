@@ -14,6 +14,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *adviceLabel;
 @property (weak, nonatomic) IBOutlet UIButton *reloadButton;
+@property (nonatomic, strong) NetworkClient *webClient;
+
+@property (nonatomic, strong) FGAFavouritesService *favouritesService;
 
 @property (strong, nonatomic) FGAModel *advice;
 @property (strong, nonatomic) id<ServiceScheduleProtocol> scheduler;
@@ -25,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.httpClient = [[NetworkClient alloc] init];
+    self.webClient = [[NetworkClient alloc] init];
     self.favouritesService = [FGAFavouritesService sharedService];
     _scheduler = [SchedulerFactory serviceSchedulerWithUserId:@"requestAdvice" andAction:^{
     [self reload:self.reloadButton];
@@ -40,12 +43,12 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [_scheduler stop];
-    [self.httpClient cancel];
+    [self.webClient cancel];
 }
 
 -(void)dealloc {
   [_scheduler stop];
-  [self.httpClient cancel];
+  [self.webClient cancel];
 }
 
 - (void)setAdvice:(FGAModel *)advice {
@@ -56,7 +59,7 @@
 - (IBAction)reload:(id)sender {
     self.reloadButton.enabled = NO;
   [_scheduler stop];
-    [self.httpClient loadRandomAdviceWithCompletionHandler:^(FGAModel *advice, NSError *error) {
+    [self.webClient loadRandomAdviceWithCompletionHandler:^(FGAModel *advice, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self scheduleRefreshTimer];
             self.reloadButton.enabled = YES;
