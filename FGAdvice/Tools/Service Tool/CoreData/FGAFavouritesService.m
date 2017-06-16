@@ -27,8 +27,6 @@ static NSString* const kTextKey = @"text";
     return sharedInstance;
 }
 
-
-
 - (void)loadFavouritesWithCompletionHandler:(void (^)(NSArray<FGAModel*>* advices))completionBlock {
     __block NSArray<NSManagedObject*> *objects;
     [self.managedObjectContext performBlock:^{

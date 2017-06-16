@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,14 +19,13 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kni-or-Had">
-                                <rect key="frame" x="0.0" y="47" width="375" height="29"/>
+                                <rect key="frame" x="0.0" y="47" width="320" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="4K1-gh-6VA"/>
-                                    <constraint firstAttribute="width" constant="375" id="JSh-gZ-dIt"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Advice"/>
@@ -36,16 +35,14 @@
                                     <action selector="showComponents:" destination="BYZ-38-t0r" eventType="valueChanged" id="fiI-Qw-quU"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DbA-lM-d67" userLabel="Advice">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbA-lM-d67" userLabel="Advice">
+                                <rect key="frame" x="0.0" y="76" width="320" height="404"/>
                                 <connections>
                                     <segue destination="cAG-A7-Rkk" kind="embed" identifier="segueAdvice" id="5hG-eD-w9W"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-9x-Gz2" userLabel="Favorites">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-9x-Gz2" userLabel="Favorites">
+                                <rect key="frame" x="0.0" y="76" width="320" height="404"/>
                                 <connections>
                                     <segue destination="tdb-Qy-sfA" kind="embed" id="djy-C8-CX7"/>
                                 </connections>
@@ -53,9 +50,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7Fi-9x-Gz2" firstAttribute="top" secondItem="Kni-or-Had" secondAttribute="bottom" constant="1" id="91p-iK-b6b"/>
+                            <constraint firstAttribute="trailing" secondItem="7Fi-9x-Gz2" secondAttribute="trailing" id="BNN-AV-fPY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Fi-9x-Gz2" secondAttribute="bottom" id="BfF-Gw-IPa"/>
                             <constraint firstItem="Kni-or-Had" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="JxF-Bi-574"/>
                             <constraint firstItem="Kni-or-Had" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QIK-zn-btc"/>
+                            <constraint firstItem="7Fi-9x-Gz2" firstAttribute="top" secondItem="Kni-or-Had" secondAttribute="bottom" constant="1" id="Sgp-Qb-Typ"/>
+                            <constraint firstItem="7Fi-9x-Gz2" firstAttribute="top" secondItem="Kni-or-Had" secondAttribute="bottom" constant="1" id="Tek-5J-OaC"/>
                             <constraint firstAttribute="trailing" secondItem="Kni-or-Had" secondAttribute="trailing" id="Vve-5F-mjz"/>
+                            <constraint firstItem="DbA-lM-d67" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZqX-Pc-XiY"/>
+                            <constraint firstItem="DbA-lM-d67" firstAttribute="top" secondItem="Kni-or-Had" secondAttribute="bottom" constant="1" id="c8B-cv-wx9"/>
+                            <constraint firstItem="7Fi-9x-Gz2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jNQ-uC-Yix"/>
+                            <constraint firstItem="7Fi-9x-Gz2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mcI-cR-EXW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Fi-9x-Gz2" secondAttribute="bottom" id="oqJ-vX-6ed"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DbA-lM-d67" secondAttribute="bottom" id="pc3-xp-eiy"/>
+                            <constraint firstAttribute="trailing" secondItem="DbA-lM-d67" secondAttribute="trailing" id="tdk-QH-G06"/>
+                            <constraint firstAttribute="trailing" secondItem="7Fi-9x-Gz2" secondAttribute="trailing" id="zS8-MI-gED"/>
                         </constraints>
                     </view>
                     <connections>
@@ -65,22 +75,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="135" y="136.25"/>
         </scene>
         <!--Favourites-->
         <scene sceneID="CiG-gH-uIN">
             <objects>
                 <tableViewController id="Jkj-J9-WQE" customClass="FGAFavouritesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YWX-Y1-gLc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="404"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="adviceCell" id="gHG-29-Fn5">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gHG-29-Fn5" id="4mG-Gv-3nF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -123,11 +133,11 @@
                         <viewControllerLayoutGuide type="bottom" id="EfM-Vv-FIw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nzh-mv-uiX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="404"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Loading Advice ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SYF-7z-RY4">
-                                <rect key="frame" x="36" y="100" width="303.5" height="28"/>
+                                <rect key="frame" x="36" y="100" width="248" height="28"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -141,7 +151,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmT-mm-eEw">
-                                <rect key="frame" x="219" y="148" width="120" height="30"/>
+                                <rect key="frame" x="164" y="148" width="120" height="30"/>
                                 <state key="normal" title="Add to Favourites"/>
                                 <connections>
                                     <action selector="addToFavourites:" destination="cAG-A7-Rkk" eventType="touchUpInside" id="cXu-nA-YFg"/>

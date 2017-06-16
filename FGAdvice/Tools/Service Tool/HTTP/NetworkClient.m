@@ -51,11 +51,12 @@ static NSString* const kErrorDomainString = @"Server Error";
 
 - (void)startDataTaskWithRequest:(NSMutableURLRequest *)request completionHandler:(DataTaskCompletion)completionHandler
 {
-    dispatch_async(self.protectingQueue, ^{
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(weakSelf.protectingQueue, ^{
         NSURLSessionDataTask *task = [self.urlSession dataTaskWithRequest:request];
         URLSessionTask *runningTask = [[URLSessionTask alloc] initWithTask:task completion:completionHandler];
         runningTask.request = request;
-        [self.runningTasks addObject:runningTask];
+        [weakSelf.runningTasks addObject:runningTask];
         [task resume];
     });
 }

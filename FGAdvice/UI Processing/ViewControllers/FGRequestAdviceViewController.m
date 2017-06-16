@@ -59,6 +59,7 @@
 - (IBAction)reload:(id)sender {
     self.reloadButton.enabled = NO;
   [_scheduler stop];
+  
     [self.webClient loadRandomAdviceWithCompletionHandler:^(FGAModel *advice, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self scheduleRefreshTimer];

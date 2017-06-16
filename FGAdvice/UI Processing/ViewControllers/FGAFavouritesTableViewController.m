@@ -66,9 +66,10 @@ static NSString* const kCellIdentifier = @"adviceCell";
 
 -(void) updateDataFromDB {
   [[ActivityIndicator sharedIndicator] startIndication];
+  __weak typeof(self) weakSelf = self;
   [self.favouritesService loadFavouritesWithCompletionHandler:^(NSArray<FGAModel *> *advices) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      self.advices = [advices mutableCopy];
+      weakSelf.advices = [advices mutableCopy];
       [[ActivityIndicator sharedIndicator] stopIndication];
     });
   }];
