@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1428761EF0190C009EF798 /* FGAdviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1428751EF0190C009EF798 /* FGAdviceTableViewCell.m */; };
 		F014E82C1EEE64FB008328E0 /* ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F014E82B1EEE64FB008328E0 /* ActivityIndicator.m */; };
 		F015793A1EEEFC610022566C /* NetworkClient+LoadAdvice.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A93AF1EEC166100C9D371 /* NetworkClient+LoadAdvice.m */; };
 		F015793F1EEEFC6B0022566C /* NSString+DecodeHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F047AC991EEA8D6F009951D1 /* NSString+DecodeHTML.m */; };
@@ -66,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D1428741EF0190C009EF798 /* FGAdviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGAdviceTableViewCell.h; sourceTree = "<group>"; };
+		0D1428751EF0190C009EF798 /* FGAdviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGAdviceTableViewCell.m; sourceTree = "<group>"; };
 		F014E82A1EEE64FB008328E0 /* ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicator.h; sourceTree = "<group>"; };
 		F014E82B1EEE64FB008328E0 /* ActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicator.m; sourceTree = "<group>"; };
 		F01E87621EE8123900ED0793 /* FGAdvice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FGAdvice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +146,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D1428731EF018C6009EF798 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D1428741EF0190C009EF798 /* FGAdviceTableViewCell.h */,
+				0D1428751EF0190C009EF798 /* FGAdviceTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F014E8291EEE64E3008328E0 /* UIActivity */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +230,7 @@
 		F047AC711EEA888C009951D1 /* UI Processing */ = {
 			isa = PBXGroup;
 			children = (
+				0D1428731EF018C6009EF798 /* Views */,
 				F014E8291EEE64E3008328E0 /* UIActivity */,
 				F047AC721EEA888C009951D1 /* ViewControllers */,
 				F047AC7C1EEA8896009951D1 /* Storyboards */,
@@ -487,6 +500,7 @@
 				F08A93C41EEC202800C9D371 /* TimerProcessing.m in Sources */,
 				F01E87671EE8123900ED0793 /* main.m in Sources */,
 				F07BD30C1EED58D400FDDD2C /* TimerServiceFactory.m in Sources */,
+				0D1428761EF0190C009EF798 /* FGAdviceTableViewCell.m in Sources */,
 				F08A93CC1EEC330800C9D371 /* FGAModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

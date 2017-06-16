@@ -8,6 +8,7 @@
 
 #import "FGAFavouritesTableViewController.h"
 #import "ActivityIndicator.h"
+#import "FGAdviceTableViewCell.h"
 
 @interface FGAFavouritesTableViewController ()
 
@@ -47,9 +48,11 @@ static NSString* const kCellIdentifier = @"adviceCell";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    FGAdviceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    
     FGAModel *advice = self.advices[(NSUInteger)indexPath.row];
-    cell.textLabel.text = advice.text;
+    [cell applyModel:advice];
+    
     return cell;
 }
 
