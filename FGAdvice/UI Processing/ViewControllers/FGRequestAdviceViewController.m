@@ -83,6 +83,7 @@
 
 - (IBAction)addToFavourites:(id)sender {
     [self.favouritesService addToFavourites:self.advice];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"updateData" object: self];
 }
 
 @end

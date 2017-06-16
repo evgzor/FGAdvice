@@ -52,10 +52,6 @@ static const NSTimeInterval animationDuration = 0.5f;
     }
     case FGSegmentsAdviceFavorite:
     {
-      FGAFavouritesTableViewController* favoriteViewCintroller =  ((FGAFavouritesTableViewController*)((UINavigationController*)self.childViewControllers[FGSegmentsAdviceFavorite]).visibleViewController);
-      if ([favoriteViewCintroller respondsToSelector:@selector(updateDataFromDB)]) {
-        [favoriteViewCintroller updateDataFromDB];
-      }
       [UIView animateWithDuration:animationDuration animations:^{
         self.containerAdvice.alpha = 0.0;
         self.containerFavorite.alpha = 1.0;

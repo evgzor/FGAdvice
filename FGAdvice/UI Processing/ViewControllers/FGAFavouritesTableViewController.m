@@ -27,12 +27,17 @@ static NSString* const kCellIdentifier = @"adviceCell";
    
     self.favouritesService = [FGAFavouritesService sharedService];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDataFromDB) name:@"updateData" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self updateDataFromDB];
   
+}
+
+-(void)dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setAdvices:(NSMutableArray<FGAModel *> *)advices {
