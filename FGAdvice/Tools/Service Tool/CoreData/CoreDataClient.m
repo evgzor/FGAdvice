@@ -74,7 +74,7 @@
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    if (!_persistentStoreCoordinator) {
+    if (!_persistentStoreCoordinator && self.storageURL) {
         @synchronized(self) {
             _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
             NSError *error = nil;
